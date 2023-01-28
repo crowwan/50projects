@@ -15,7 +15,7 @@ export default function FormElement($app, { label, type }) {
   this.render = function () {
     const tmpl = `
       <label>${label}</label>
-      <input type='${type}' placeholder='Enter ${label}' class=''/>
+      <input type='${type}' placeholder='Enter ${label}' id='${label}'/>
     `;
     $inputBox.innerHTML = tmpl;
   };
