@@ -1,8 +1,8 @@
 :root {
   --background-color: #242333;
-  --selected: #6feaf6;
-  --occupied: #fff;
-  --null: #444451;
+  --selected-color: #6feaf6;
+  --occupied-color: #fff;
+  --null-color: #444451;
 }
 * {
   padding: 0;
@@ -10,5 +10,87 @@
   outline: none;
   border: none;
   box-sizing: border-box;
+}
+
+#root {
+  background-color: var(--background-color);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  width: 500px;
+}
+
+select {
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+.seat-info {
+  display: flex;
+  gap: 3rem;
+  padding: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.seat-btn {
+  display: flex;
+  font-size: 14px;
+  gap: 0.5rem;
+}
+.seat-btn > div {
   display: block;
+  border-radius: 50% 50% 0 0;
+  height: 15px;
+  width: 20px;
+}
+
+.null {
+  background-color: var(--null-color);
+}
+.selected {
+  background-color: var(--selected-color);
+}
+.occupied {
+  background-color: var(--occupied-color);
+}
+
+.screen {
+  background-color: #fff;
+  height: 70px;
+  width: 100%;
+  margin: 15px 0;
+  transform: rotateX(-45deg);
+  box-shadow: 0 3px 10px rgb(255 255 255 / 70%);
+}
+.seats-container {
+  perspective: 1000px;
+  width: 100%;
+  text-align: center;
+}
+
+.seats {
+  display: flex;
+  justify-content: center;
+}
+.seats .seat-btn {
+  margin: 0.2rem;
+}
+.seats .seat-btn:hover {
+  transform: scale(1.2);
+}
+.seats > ul:nth-child(2) {
+  margin-right: 0.5rem;
+}
+.seats > ul:nth-last-child(2) {
+  margin-left: 0.5rem;
+}
+.clickable {
+  cursor: pointer;
 }
