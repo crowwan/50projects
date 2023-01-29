@@ -1,0 +1,14 @@
+:root {
+  --background-color: #242333;
+  --selected: #6feaf6;
+  --occupied: #fff;
+  --null: #444451;
+}
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  display: block;
+}
