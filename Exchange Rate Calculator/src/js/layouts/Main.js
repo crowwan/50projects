@@ -43,7 +43,8 @@ export default function Main($app) {
     last && $main.removeChild(last);
     const $res = $c("div");
     $res.id = "result";
-    $res.textContent = calculate(this.state.rate).toFixed(2);
+    $res.textContent =
+      calculate(this.state.rate).toFixed(2) + " " + this.state.c2;
     $main.append($res);
   };
   this.render();

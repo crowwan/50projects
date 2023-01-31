@@ -20,3 +20,38 @@ h1 {
   color: var(--primary-color);
   margin-bottom: 2rem;
 }
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  margin-top: 2rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 10px;
+}
+.main > * {
+  width: 50%;
+  height: 40px;
+  margin-bottom: 5px;
+}
+
+.main > button {
+  background-color: var(--primary-color);
+  color: white;
+  width: 100%;
+}
+
+.main > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input {
+  font-size: 16px;
+  text-align: right;
+  border: 1px solid black;
+  border-radius: 5px;
+}
